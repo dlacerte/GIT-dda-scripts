@@ -3,7 +3,6 @@
 import psycopg2
 import sys
 
-# BB query SaaS DDA to obtain blackboard USER records
 # Connect to remote BB DDA Postgres instance using psycopg2 python module
 
 # DDA postgres psql queries
@@ -25,8 +24,7 @@ get_content_type = "select pk1, content_type, cnthndlr_handle, text_format_type 
 #crspk1 = sys.argv[1]
 
 # DDA credentials
-#db = psycopg2.connect(database='BB5a333e152baa2', user='ddauser1', password='QVOERHH6USCFP7W', host='bbproxy.wccnet.edu', port='54320')
-db = psycopg2.connect(database='BB59a44b471fcc3', user='ddauser91', password='153GMBP7SQ0KNAW', host='bbproxy.wccnet.edu', port='54321')
+db = psycopg2.connect(database='xxxx', user='xxx', password='xxxxx', host='xxxx.edu', port='54321')
 cur = db.cursor()
 
 #FUNC: uuid_to_courseid()
