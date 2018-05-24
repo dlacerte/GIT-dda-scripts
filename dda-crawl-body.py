@@ -3,7 +3,6 @@
 import psycopg2
 import sys
 
-# BB query SaaS DDA to obtain blackboard USER records
 # Connect to remote BB DDA Postgres instance using psycopg2 python module
 
 # DDA postgres psql queries
@@ -27,9 +26,8 @@ get_cms_resource_link = "select parent_pk1, crsmain_pk1, parent_data_type, resou
 
 # DDA credentials
 # SAAS LIVE = BB5a333e152baa2
-db = psycopg2.connect(database='BB5a333e152baa2', user='ddauser1', password='QVOERHH6USCFP7W', host='bbproxy.wccnet.edu', port='54320')
-# SAAS PROD/OLD = BB59a44b471fcc3
-#db = psycopg2.connect(database='BB59a44b471fcc3', user='ddauser91', password='153GMBP7SQ0KNAW', host='bbproxy.wccnet.edu', port='54321')
+db = psycopg2.connect(database='xxx', user='xxx', password='xxx', host='xxxproxy.edu', port='54320')
+
 cur = db.cursor()
 
 #FUNC: get_cms_res(crspk1)
