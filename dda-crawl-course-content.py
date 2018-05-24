@@ -5,7 +5,6 @@ import sys
 import tempfile
 import re
 
-# BB query SaaS DDA to obtain blackboard USER records
 # Connect to remote BB DDA Postgres instance using psycopg2 python module
 
 # DDA postgres psql queries
@@ -32,17 +31,11 @@ get_all_xyf_urls_CNAME_match = "select file_name, full_path from xyf_urls where 
 #crspk1 = sys.argv[1]
 
 # DDA credentials
-# SAAS LIVE = BB5a333e152baa2
-db = psycopg2.connect(database='BB5a333e152baa2', user='ddauser1', password='QVOERHH6USCFP7W', host='bbproxy.wccnet.edu', port='54320')
-db_cms_doc = psycopg2.connect(database='BB5a333e152baa2_cms_doc', user='ddauser1', password='QVOERHH6USCFP7W', host='bbproxy.wccnet.edu', port='54320')
-
-# SAAS PROD/OLD = BB59a44b471fcc3
-#db = psycopg2.connect(database='BB59a44b471fcc3', user='ddauser91', password='153GMBP7SQ0KNAW', host='bbproxy.wccnet.edu', port='54321')
-#db_cms_doc = psycopg2.connect(database='BB59a44b471fcc3_cms_doc', user='ddauser91', password='153GMBP7SQ0KNAW', host='bbproxy.wccnet.edu', port='54321')
+db = psycopg2.connect(database='xxxx', user='ddauser1', password='xxxxx', host='xxxx.edu', port='54320')
+db_cms_doc = psycopg2.connect(database='xxxx_cms_doc', user='xxxx', password='xxxxxx', host='xxxxx.edu', port='54320')
 
 cur = db.cursor()
 cur_cms_doc = db_cms_doc.cursor()
-
 
 # FUNC: get_all_xyf_urls(CNAME)
 # fetches all of the URLS from xyf_urls where the full_path contains a reference/matches CNAME(course_id) 
@@ -318,9 +311,6 @@ for num in range(1, numargs):
         #print "IMPORTED_CONTENT_LIST = ", IMPORTED_CONTENT_LIST
 	#for item in IMPORTED_CONTENT_LIST:
 	#	print "ImportedContent =", item
-
-
-
 
 ##for citem in NEW_BASE_LIST:
 	#print "item = ", citem 
